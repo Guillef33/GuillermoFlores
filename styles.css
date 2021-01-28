@@ -95,8 +95,29 @@ body {
    text-align: center;
 }
 
+.item1 {
+    background: white;
+    width: 30%;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    height: 220px;
+    display: grid;
+    align-items: center;
+}
+ }
+
+.logoEmpresas {
+    font-size: 200px !important; /* este no lo toma */
+}
+
+.fa-lightbulb:before {
+    font-size: 200px !important; /* este lo toma pero individual */
+}
+
+/* Agregue una imagen para probar tambien */
+
 [class^="far fa"]{
-    font-size: 50px;
+    font-size: 80px;
     text-align: center;
 }
 
@@ -166,19 +187,23 @@ footer {
     padding:60px 0;
     text-align: center;
 }
-
+/* 
 [class^="fab fa"]{
     font-size: 50px;
-    color: white;
-}
+} */
 
 .textos-footer  {
     grid-column: 1/-1; 
+    margin-bottom: 30px;
+}
+
+
+[class^="footer-item"] a {
+    font-size: 50px;
 }
 
 [class^="footer-item"]{
 grid-column: span 3;
-margin-top: 20px;
 }
 
 

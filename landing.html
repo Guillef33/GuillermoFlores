@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page YouTube con CSS Grid</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="menu.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
@@ -12,6 +13,48 @@
 
 </head>
 <body>
+    <section>
+        <!-- Main Top Menu -->
+            <nav>
+              <div id="navbar">
+                <div id="logo">
+                    <div class="logo">
+                  <img src="images/logo-telegram.png" alt="">
+                    </div>
+                 </div>
+
+                  <div id="links">
+                    <a href="">About</a>
+                    <a href="">Portfolio</a>
+                    <a href="">Blog</a>
+                    <a href="">Services</a>
+                    <a href="">Contact Us</a>
+                  </div>
+
+                  <div id="cta">
+                    <a href="" id="boton">Get In Touch</a>
+                  </div>
+          
+                  <div class="mobile-btn">
+                    <a id="menu-btn" onclick="myFunction()" class="fa fa-bars fa-2x"></a>
+                  </div>
+          
+              </div>
+            </nav>
+        
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu">
+              <ul class="mobile-links">
+                <li class="nav-list"><a href="#">About</a></li>
+                <li class="nav-list"><a href="#">Portfolio</a></li>
+                <li class="nav-list"><a href="#">Services</a></li>
+                <li class="nav-list"><a href="#">Blog</a></li>
+                <li class="nav-list"><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+    </section>
+
+
     <header class="header">
 
         <div class="grid">
@@ -19,7 +62,7 @@
             <div class="textos-hero">
                 <h1 class="weight-600">Convertimos tus suenos <span class="weight-400"> en realidad</span></h1>
                 <p class="parrafo">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero cumque, iusto perspiciatis maiores, eius sed incidunt est alias neque debitis ducimus reiciendis officia optio? Optio exercitationem pariatur nobis accusamus magni?</p>
-                <a href="" class="cta">Contactame</a>
+                <a href="" class="cta" id="contactoBtn">Contactame</a>
             </div>
             <div class="img-hero">
                 <img src="undraw-tourist-map.svg" alt="Undraw Tourist Map Free Illustration" class="img">
@@ -106,7 +149,7 @@
         <div class="textos-footer">
             <h2 class="subtitulo">Contactame</h2>
         </div>
-     <!--   <div class="footer-items"> -->
+<!-- <div class="footer-items">  -->
             <div class="footer-item1">
                 <a href =""><i class="fab fa-facebook"></i></a>
             </div>
@@ -119,7 +162,7 @@
             <div class="footer-item4">
                 <a href=""><i class="fab fa-linkedin"></i></a>
             </div>
-     <!--   </div> -->
+<!-- </div> -->
     </div>
 </footer>
 
@@ -128,6 +171,7 @@
 
 
 
+<script src="mobileBtn.js"></script>
 
     
     

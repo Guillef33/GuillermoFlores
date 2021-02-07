@@ -109,15 +109,16 @@ body {
 .logoEmpresas {
     font-size: 200px !important; /* este no lo toma */
 }
-
+/*
 .fa-lightbulb:before {
-    font-size: 200px !important; /* este lo toma pero individual */
+    font-size: 200px !important;  este lo toma pero individual
 }
+ */
 
 /* Agregue una imagen para probar tambien */
 
 [class^="far fa"]{
-    font-size: 80px;
+    font-size: 60px;
     text-align: center;
 }
 

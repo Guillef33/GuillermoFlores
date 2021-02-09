@@ -1,0 +1,30 @@
+.grid-portfolio {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    width: 90%;
+    max-width: 1100px;
+    height: 100%;
+    margin: auto;
+    gap:10px;
+    align-items: center;
+}
+
+.items {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.item-portfolio {
+    background: white;
+    width: 30%;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    height: 280px;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+#linkSite {
+    color: black;
+    font-weight: 700;
+}

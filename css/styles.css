@@ -113,7 +113,7 @@ body {
 
 
 [class^="far fa"]{
-    font-size: 60px;
+    font-size: 60px !important;
     text-align: center;
 }
 
@@ -216,7 +216,7 @@ footer {
 
 
 [class^="footer-item"] a {
-    font-size: 50px;
+    font-size: 60px;
 }
 
 [class^="footer-item"]{
@@ -292,6 +292,24 @@ grid-column: span 3;
         width: 90%;
         flex-shrink: 0;
     }
+
+    /* No puedo poner el portfolio en una sola columna 
+
+    #portfolio {
+        grid-column: 1/-1;
+
+    }
+
+    .item-portfolio {
+        grid-template-columns: repeat(auto-fit, minmax(180px), 1fr);
+
+    }
+
+    .grid-portfolio {
+        grid-template-columns: repeat(auto-fit, minmax(180px), 1fr);
+    }
+
+    */
 
     .number {
         width: 55%;

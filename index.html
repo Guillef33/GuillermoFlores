@@ -8,6 +8,7 @@
     <!-- Estilos Personalizados -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/portfolio.css">
 
     <!-- Fonts -->
 
@@ -18,13 +19,16 @@
 
 </head>
 <body>
-    <section>
+
+    <!-- Menu Desktop -->
+
+    <header>
         <!-- Main Top Menu -->
             <nav>
               <div id="navbar">
                 <div id="logo">
                     <div class="logo">
-                        <p> GF</p>
+                        <h2 class="menuTitle"> GF</h2>
                    <!--   <img src="images/logo-telegram.png" alt=""> -->
                     </div>
                  </div>
@@ -58,10 +62,14 @@
                 <li class="nav-list"><a href="contacto.html">Contact Us</a></li>
               </ul>
             </div>
-    </section>
+        </header>
 
+    <!-- END Menu Desktop -->
 
-    <header class="header">
+    <main>
+
+    <!-- Header Hero Home -->
+    <section class="header">
 
         <div class="grid">
 
@@ -75,14 +83,15 @@
             </div>
              
         </div>
-    </header>
+    </section>
 
-    <main>
-        <section class="services">
+    <!-- END Header Hero Home -->
+
+    <!-- Services Card -->
+
+        <section class="services">     <!-- Cambiar esta clase por un id -->
             <div class="grid">
-
                 <div class="items">
-
                     <div class="item">
                         <i class="far fa-lightbulb"></i>
                         <h3 class="titulo-services">01 Leading                       . 
@@ -110,11 +119,15 @@
 
         </section>
 
+    <!-- END Services Card -->
+
+    <!-- About Me -->
+
    <section class="about-us">
         <div class="grid">
             <div class="textos-about-us">
-                <h2 class="subtitulo">About us</h2>
-                <p class="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe placeat iusto, numquam consectetur enim commodi laborum unde repellendus eaque, beatae laudantium veritatis sed excepturi ipsa aspernatur quia quo animi inventore.</p>
+                <h2 class="subtitulo">Sobre mi</h2>
+                <p class="parrafo">Licenciado de comunicacion, espcialista en marketing, editor de libros, emprendedor digital, bloguero, estudiante de la tecnitura de analista en sistemas, musico, escritor. Todo esto soy.</p>
             </div>
             <div class="numbers">
                 <div class="number">+10 anos de experiencia</div>
@@ -127,18 +140,29 @@
 
         </section>
 
+
+        <section id="businessArea" >
+            <div class="grid">
+                <div class="textosSectionHome">
+                    <h2 class="subtitulo">3 areas de negocios</h2>
+                    <p class="parrafo">Soy especialista en desarrollos en WordPress y frontend con Bootstrap, HTML, CSS y JavaScript. Tengo gran experiencia en creación de plataformas, sitios de ecommerce, landing pages, newsletters. Por haber trabajado en comunicación y marketing digital me interesa mucho la UX, UI, navegabilidad, optimización, SEO y CRO.</p>
+                </div>
+            </div>
+        </section>
+
         <section class="mission grid">
-            <div class="textos-mission">
+
+         <div class="textos-mission">
                 <div class="texto-mission">
-                    <h3>01 Leading</h3>
+                    <h3>Web Development</h3>
                     <p class="parrafo">Las soft skills son que garantizar el buen funcionamiento de los equipos.</p>
                 </div>
                 <div class="texto-mission">
-                    <h3>02 Coding</h3>
+                    <h3>Project Managment</h3>
                     <p class="parrafo">Tengo perfil tech. Desde que comence en marketing siempre me volque a lo tecnico. Luego me especialice en front end y WordPress. Ahora estoy estudiando la tecnicatura de Analista en Sistemas</p>
                 </div>
                 <div class="texto-mission">
-                    <h3>03 Business</h3>
+                    <h3>Contenidos</h3>
                     <p class="parrafo">Vengo de marketing y trabaje durante el ultimo ano en la generacion de oportunidades comerciales y un plan de crecimiento del negocio para Connaxis, que paso de ser una agencia de marketing digital a convertirse en un proveedor de talento digital y desarrollo web para empresas</p>
                 </div>
             </div>
@@ -146,6 +170,64 @@
                     <img src="images/social-ideas.svg" alt="Social Ideas Free Illustration" class="img">
                 </div>
             </div>
+        </section>
+
+        <section class="about-us">
+            <div class="grid">
+                <div class="textos-about-us">
+                    <h2 class="subtitulo">CTA Headline</h2>
+                    <p class="parrafo">Dejame tus datos y suscribite al nes.</p>
+                    <button id="boton">Suscribe</button>
+                </div>
+         
+                
+            </div>
+    
+            </section>
+
+        <section class="portfolio">
+
+            <div class="grid">
+                <div class="textosSectionHome">
+                    <h2 class="subtitulo">Conoce mis trabajos</h2>
+                    <p class="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe placeat iusto, numquam consectetur enim commodi laborum unde repellendus eaque, beatae laudantium veritatis sed excepturi ipsa aspernatur quia quo animi inventore.</p>
+                </div>
+            </div>
+
+
+            <div class="grid-portfolio" id="home">
+                <div class="items">
+
+                    <div class="item-portfolio">
+                       <!--<i class="far fa-lightbulb"></i> --> 
+                        <img src="images/mosaic.png" alt="" width="280px">
+                        <h3 class="titulo-services">Mosaic The Movement                     . 
+                        </h3>
+                        <p>Event Site in WorPress and WooCommerce</p>
+                        <a href="mosaicthemovement.com" id="linkSite">View Site</a>
+                    </div>
+
+                    <div class="item-portfolio">
+                       <!--<i class="far fa-lightbulb"></i> --> 
+                       <img src="images/MareFish.png" alt="">
+                        <h3 class="titulo-services">MareFish
+                        </h3>
+                        <p>Ecommerce site for the fishing company in Madrid. WooCommerce e integracion con RedSys</p>
+                        <a href="marefish.es" id="linkSite">View Site</a>
+                    </div>
+
+                    <div class="item-portfolio">
+                       <!--<i class="far fa-lightbulb"></i> --> 
+                       <img src="images/rollandbodega.jpg" alt="">
+                        <h3 class="titulo-services">Bodega Rolland
+                        </h3>
+                        <p>Ecommerce from the wine boutique cellar from Michael Rolland</p>
+                        <a href="mosaicthemovement.com" id="linkSite">View Site</a>
+                    </div>                  
+
+                </div>              
+            </div>
+
         </section>
 
         <!---

@@ -131,13 +131,22 @@ body {
 }
 
 .textos-about-us  {
-    grid-column: 1/-1;
+    grid-column: 3/11;
     text-align: center;
 }
 
 .textos-about-us .parrafo {
     margin-top: 10px;
     color: lightgray;
+}
+
+.textosSectionHome  {
+    grid-column: 3/11;
+    text-align: center; 
+}
+
+.textosSectionHome .parrafo .subtitulo {
+    color:black;
 }
 
 .numbers {
@@ -153,7 +162,19 @@ body {
     width: 22%;
 }
 
+/* Business area */
+
+#businessArea {
+    padding-top: 30px;
+}
+
+#businessArea .parrafo{
+     margin-bottom: 10px !important;
+}
+
+
 /* Mission */
+
 
 .mission {
     color: black;

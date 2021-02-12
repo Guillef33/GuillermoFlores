@@ -4,7 +4,7 @@
     display: grid;
     min-height: 100px;
     grid-auto-flow: column;
-    background-color:#84a9ac;
+    background-color:black;
     grid-gap: 1.5em;
     padding: 20px 40px 20px 40px;
     -webkit-box-shadow: -1px 4px 5px 0px rgba(209, 205, 209, 1);
@@ -100,12 +100,6 @@
   font-size: 15px;
 }
 
-/*
-i {
-  font-size: 20px !important ;
-}
-*/
-  
   a {
     text-decoration: none;
     color: white;
@@ -113,6 +107,10 @@ i {
   
   a:hover {
     color: #0474bc;
+  }
+
+  .menuTitle {
+    color: white;
   }
   
   /* =======================

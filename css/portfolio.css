@@ -1,3 +1,9 @@
+.portfolio {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+
 .grid-portfolio {
     display: grid;
     grid-template-columns: repeat(12,1fr);
@@ -7,7 +13,6 @@
     margin: auto;
     gap:10px;
     align-items: center;
-
 }
 
 #home  {

@@ -395,7 +395,32 @@ grid-column: span 4;
     grid-column: 1/-1;
 }
   
-
-
 }
+
+/* FORMULARIO FORM */
+
+.simple-form{
+	max-width:400px;
+	background-color:#cccccc;
+	padding:50px;
+	
+	display:grid;
+	grid-template-columns:100px 1fr; 
+	grid-gap: 16px;
+}
+
+.simple-form label {
+    grid-column: 1 / 2;
+}
+ 
+.simple-form input,
+.simple-form button {
+    grid-column: 2 / 3;
+}
+
+.simple-form button{
+	margin-top:20px;
+}
+
+
 

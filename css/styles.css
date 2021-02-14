@@ -231,6 +231,12 @@ body {
     grid-column: 7/15;
     grid-row: 1/-1; 
 }
+
+
+.textos-contact  {
+    grid-column: 1/7;
+    grid-row: 1/-1; 
+}
 /*
 .textos-mission .parrafo {
     color: lightgray;
@@ -272,10 +278,12 @@ footer {
     padding:50px 0;
     text-align: center;
 }
-/* 
-[class^="fab fa"]{
+ 
+[class^="fab fa"], [class^="fas fa"]{
     font-size: 50px;
-} */
+} 
+
+
 
 .textos-footer  {
     grid-column: 1/-1; 
@@ -400,13 +408,13 @@ grid-column: span 4;
 /* FORMULARIO FORM */
 
 .simple-form{
-	max-width:400px;
-	background-color:#cccccc;
+
+    border:1px solid rgba(0, 0, 0, 0.5);
 	padding:50px;
-	
 	display:grid;
 	grid-template-columns:100px 1fr; 
 	grid-gap: 16px;
+    grid-column: 7/15;
 }
 
 .simple-form label {

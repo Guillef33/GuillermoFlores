@@ -148,6 +148,10 @@
     cursor: pointer;
   }
 
+.fa-2x {
+    color: white;
+}
+
   
   #logo img {
     width: 70%;

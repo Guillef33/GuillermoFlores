@@ -19,9 +19,11 @@ body {
     max-width: 1100px;
     height: 100%;
     margin: auto;
-    gap:10px;
+    grid-gap:10px;
     overflow: hidden;
     align-items: center;
+    margin-bottom: 20px;
+
 }
 
 .gridDev {
@@ -30,7 +32,7 @@ body {
     width: 90%;
     max-width: 1100px;
     margin: auto;
-    gap:10px;
+    grid-gap:10px;
     overflow: hidden;
     align-items: center;
 }
@@ -113,6 +115,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
+    grid-gap:10px;
 }
 
 .itemsDev {
@@ -127,16 +130,19 @@ body {
     padding-top: 10px;
 }
 
-.item {
+.portfolio .items .item {
    background: white;
    width: 30%;
    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
    overflow: hidden;
-   height: 220px;
    padding: 20px 10px;
    text-align: center;
+   height: 320px;
 }
-
+.portfolio .items .item img{
+    max-height:130px;
+    max-width: 220px;
+} 
 .itemDev {
    background: white;
    width: 30%;
@@ -349,7 +355,7 @@ grid-column: span 4;
     max-width: 1100px;
     height: 100%;
     margin: auto;
-    gap:10px;
+    grid-gap:10px;
     align-items: center;
 }
 
@@ -379,7 +385,7 @@ grid-column: span 4;
 
 /* Pantallas 800px */
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:768px) {
     .header {
         height: auto;
     }
@@ -397,7 +403,9 @@ grid-column: span 4;
     .textos-hero {
         margin-top: 40px;
     }
-
+    .portfolio .items .item img{
+        max-width: 200px !important;
+    }
     .textos-hero {
         margin-top: 40px;
     }
@@ -411,7 +419,7 @@ grid-column: span 4;
         width: 60%;
         margin:40px 0;
         height: auto;
-        padding: 40px;
+        padding: 25px 15px;
      }
 
 

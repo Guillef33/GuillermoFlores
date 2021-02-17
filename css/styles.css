@@ -48,7 +48,7 @@ body {
 }
 
 .parrafo {
-    margin-bottom: 60px;
+    margin-bottom: 20px;
 }
 
 .header  {
@@ -96,7 +96,7 @@ body {
 /* Header */
 
 .services {
-    height: 370px;
+    height: 350px;
     background:linear-gradient(180deg, white 50%, black 50%);
 }
 
@@ -181,6 +181,7 @@ body {
     text-align: center;
 }
 
+
 .textos-about-us .parrafo {
     margin-top: 10px;
     color: lightgray;
@@ -195,18 +196,16 @@ body {
     color:black;
 }
 
-.numbers {
+.stack {
     grid-column: 1/-1;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    padding-top: 60px;
+    padding-bottom: 20px;
 }
 
-.number {
-    text-align: center;
-    font-size: 30px;
-    width: 22%;
-}
+
 
 /* Business area */
 
@@ -283,8 +282,6 @@ footer {
     font-size: 50px;
 } 
 
-
-
 .textos-footer  {
     grid-column: 1/-1; 
     margin-bottom: 30px;
@@ -297,6 +294,49 @@ footer {
 
 [class^="footer-item"]{
 grid-column: span 4;
+}
+
+/* Portfolio */
+
+.portfolio {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+
+.grid-portfolio {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    width: 90%;
+    max-width: 1100px;
+    height: 100%;
+    margin: auto;
+    gap:10px;
+    align-items: center;
+}
+
+#home  {
+    margin-bottom: 30px !important;
+}
+
+.items {
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+.item-portfolio {
+    background: white;
+    width: 30%;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    height: 280px;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+#linkSite {
+    color: black;
+    font-weight: 700;
 }
 
 /* Pantallas 800px */

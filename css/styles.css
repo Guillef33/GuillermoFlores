@@ -2,7 +2,6 @@
 
 /* Valores Generales */
 
-
 * {
     margin:0;
     padding: 0;
@@ -23,7 +22,6 @@ body {
     overflow: hidden;
     align-items: center;
     margin-bottom: 20px;
-
 }
 
 .gridDev {
@@ -37,55 +35,56 @@ body {
     align-items: center;
 }
 
-/* Valores Generales */
+/* Hero Section */
 
+#heroSection .grid {
+    height: 600px;
+}
 
-.weight-400  {
+#heroSection .grid {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    width: 90%;
+    max-width: 1100px;
+    height: 100%;
+    margin: auto;
+    grid-gap:10px;
+    overflow: hidden;
+    align-items: center;
+    margin-bottom: 20px;
+} 
+
+#heroSection .weight-400  {
     font-weight: 400;
 }
 
-.weight-600  {
+#heroSection .weight-600  {
     font-weight: 600;
     padding-bottom: 20px;
 }
 
-.parrafo {
+#heroSection .parrafo {
     margin-bottom: 20px;
 }
 
-.header  {
-    height: 600px;
-}
-
-.img-hero  {
+#heroSection .img-hero  {
     width: 100%;
     height: auto;
     grid-column: 7/13;
     display: flex;
 }
 
-.img  {
-    width: 95%;
-
-}
-
-.imgProfile {
-    border-radius: 50%;
-    margin: auto;
-
-}
-
-.textos-hero  {
+#heroSection .textos-hero  {
     grid-column: 1/7;
     padding-right: 40px;
 }
 
 
-.textos-hero p {
+#heroSection .textos-hero p {
     text-align: justify ;
 }
 
-.cta  {
+#heroSection .cta  {
     width: 250px;
     background: black;
     color: white;
@@ -95,17 +94,41 @@ body {
     text-decoration: none;
 }
 
-/* Header */
 
-.services {
+/* END Hero Section */
+
+/* START sobreMi Section */
+
+#sobreMi {
     height: 350px;
     background:linear-gradient(180deg, white 50%, black 50%);
 }
 
-
-.servicesDev {
-    background: black;
+#cardSobreMi .items .item img{
+    max-height:130px;
+    max-width: 220px;
 }
+
+#cardSobreMi .items .item {
+    background: white;
+    width: 30%;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    padding: 20px 10px;
+    text-align: center;
+    height: 250px;
+ }
+
+ #cardSobreMi .bigNumber {
+     font-size: 50px;
+     font-weight: 700;
+ }
+
+ /* END sobreMi Section */
+
+
+ 
+ 
 
 .items {
     grid-column: 1/-1;
@@ -139,6 +162,7 @@ body {
    text-align: center;
    height: 320px;
 }
+
 .portfolio .items .item img{
     max-height:130px;
     max-width: 220px;
@@ -210,9 +234,7 @@ body {
     padding-bottom: 20px;
 }
 
-
-
-/* Business area */
+/* START Business Area Section */
 
 #businessArea {
     padding-top: 30px;
@@ -221,6 +243,24 @@ body {
 #businessArea .parrafo{
      margin-bottom: 10px !important;
 }
+
+.img  {
+    width: 95%;
+
+}
+
+.imgProfile {
+    border-radius: 50%;
+    margin: auto;
+
+}
+
+.parrafo {
+    margin-bottom: 20px;
+}
+
+
+/* END Business Area Section */
 
 
 /* Mission */
@@ -234,6 +274,7 @@ body {
 .textos-mission  {
     grid-column: 7/15;
     grid-row: 1/-1; 
+    margin-bottom: 10px;
 }
 
 
@@ -383,6 +424,13 @@ grid-column: span 4;
     font-weight: 700;
 }
 
+/* Pagina Desarrollo */
+
+
+#servicesDev {
+    background: black;
+}
+
 /* Pantallas 800px */
 
 @media screen and (max-width:768px) {
@@ -410,7 +458,7 @@ grid-column: span 4;
         margin-top: 40px;
     }
 
-    .services  {
+    #sobreMi  {
        height: auto;
        margin-top:40px;
     }
@@ -446,17 +494,41 @@ grid-column: span 4;
     .img { 
         max-width: auto;
     }
-    /* Puede que esto no sea necesario */
 
     .grid {
         grid-template-columns: repeat(auto-fit, minmax(180px), 1fr);
     }
 
-    .item  {
-        width: 90%;
+    #sobreMi .items .item {
+        grid-column: 1/-1;
+        background: white;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+        padding: 20px 10px;
+        text-align: center;
+        height: 250px;
+        width: 90%;        
         flex-shrink: 0;
-    }
+        grid-gap: 10px;
+        margin: 0px;
+     }
 
+     .portfolio .items .item {
+        grid-column: 1/-1;
+        background: white;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+        padding: 20px 10px;
+        text-align: center;
+        height: 250px;
+        width: 90%;        
+        flex-shrink: 0;
+        grid-gap: 10px;
+        margin: 0px;
+     }
+
+
+    
     /* No puedo poner el portfolio en una sola columna 
 
     #portfolio {

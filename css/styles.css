@@ -43,10 +43,6 @@ body {
 /* Hero Section */
 
 #heroSection .grid {
-    height: 600px;
-}
-
-#heroSection .grid {
     display: grid;
     grid-template-columns: repeat(12,1fr);
     width: 90%;
@@ -56,7 +52,8 @@ body {
     grid-gap:10px;
     overflow: hidden;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    margin-top: 30px;
 } 
 
 #heroSection .weight-400  {
@@ -273,6 +270,16 @@ body {
     grid-row: 1/-1;
 }
 
+    
+#mission .textosContacto {
+    grid-column: 1/7;
+}
+
+#mission .form {
+    grid-column:8/15;
+    grid-row:1/2;
+}
+
 /* START CTA Section */
 
 #ctaSection {
@@ -390,12 +397,11 @@ body {
         border-radius: 50px; 
         background-color:black;
         color: white;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding: 20px 20px;
         font-family: "Open Sans", sans-serif;
         align-items: center;
         font-weight: 900;
-        font-size: 13px;
+        font-size: 16px;
         margin:auto;
         margin-bottom: 20px;
 }
@@ -435,19 +441,12 @@ body {
     align-items: center;
 }
 
-
-
-
 .titulo-services {
     margin: 20px;
 }
 
 
 /* Grid Portolfio en Home */
-
-
-
-
 
 /* Footer */
 
@@ -483,7 +482,6 @@ grid-column: span 4;
     padding-bottom: 30px;
 
 }
-
 .grid-portfolio {
     display: grid;
     grid-template-columns: repeat(12,1fr);
@@ -532,7 +530,6 @@ grid-column: span 4;
 /* START Formulario Section */
 
 .simple-form{
-
     border:1px solid rgba(0, 0, 0, 0.5);
 	padding:50px;
 	display:grid;
@@ -552,6 +549,10 @@ grid-column: span 4;
 
 .simple-form button{
 	margin-top:20px;
+}
+
+.textosContacto {
+    grid-column: 1/7;
 }
 
 /* Pantallas 800px */
@@ -609,6 +610,8 @@ grid-column: span 4;
         grid-row:1/2;
        align-self: center;
     }
+
+
 }
 
 /* Pantallas 400px */

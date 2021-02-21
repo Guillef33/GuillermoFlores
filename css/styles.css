@@ -286,13 +286,22 @@ body {
     background: black;
     color: white;
     height: auto;
-    padding-bottom: 60px;
+    padding-bottom: 30px;
     display: flex;
-    flex-direction: column;
+    display: grid;
 }
 
 #ctaSection .cta-row {
-    grid-column: 3/11;
+    grid-row: 1/6;
+    grid-template-rows: 7/12;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+#ctaSection .cta-row2 {
+    grid-row: 7/12;
+    grid-template-rows: 7/12;
     text-align: center;
     padding-top: 30px;
     padding-bottom: 10px;

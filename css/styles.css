@@ -351,26 +351,30 @@ body {
     display: flex;
     width: 100%;
     height: 100%;
+    padding: 20px 20px;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
     grid-gap:10px;
 }
 
-#portfolio .items .item {
+#portfolio .item {
     background: white;
     width: 30%;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  /*  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5); */
+    border: 2px solid;
     overflow: hidden;
-    padding: 20px 10px;
     text-align: center;
-    height: 320px;
  }
  
  #portfolio .items .item img{
-     max-height:130px;
-     max-width: 220px;
+     max-height:200px;
+     max-width: 300px;
  } 
+
+ #portfolio .textCard{
+    padding-bottom: 20px;
+} 
 
  #portfolio button {
     width: 100%;
@@ -380,10 +384,9 @@ body {
    text-transform: uppercase;
    color:white;
    padding: 0 !important;
+
 }
 
- /* FIN DE PROBLEMAS EN ESTA SECCION ENTRE ITEMS E ITEM */
- 
 
 #portfolio .textosSectionHome  {
     grid-column: 3/11;
@@ -416,6 +419,8 @@ body {
 }
 
 /* END Portfolio Section */
+
+/* START ITEMS DEV Portfolio Section in Desarrollo.html */
 
 
 .itemsDev {
@@ -455,8 +460,6 @@ body {
 }
 
 
-/* Grid Portolfio en Home */
-
 /* Footer */
 
 footer {
@@ -482,48 +485,6 @@ footer {
 
 [class^="footer-item"]{
 grid-column: span 4;
-}
-
-/* Portfolio */
-
-.portfolio {
-    padding-top: 30px;
-    padding-bottom: 30px;
-
-}
-.grid-portfolio {
-    display: grid;
-    grid-template-columns: repeat(12,1fr);
-    width: 90%;
-    max-width: 1100px;
-    height: 100%;
-    margin: auto;
-    grid-gap:10px;
-    align-items: center;
-}
-
-#home  {
-    margin-bottom: 30px !important;
-}
-
-.items {
-  margin-top: 1px;
-  margin-bottom: 1px;
-}
-
-.item-portfolio {
-    background: white;
-    width: 30%;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
-    height: 280px;
-    padding: 20px 10px;
-    text-align: center;
-}
-
-#linkSite {
-    color: black;
-    font-weight: 700;
 }
 
 

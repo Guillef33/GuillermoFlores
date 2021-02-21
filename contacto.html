@@ -91,21 +91,25 @@
             <h2 class="weight-600">Escribinos y contanos tu proyecto</h2>
             <p>Formmamos squads para proyectos desafiantes y originales. </p>
         </div>
-            <form class="simple-form">
-                <label>Nombre</label>
-                <input id="firstName" type="text">
+            <form class="simple-form" action="contacto.php" method="POST">
+
+                    <label>Nombre</label>
+                    <input id="firstName" type="text" class="form-control" name="form-firstName" placeholder="Ingrese su nombre" require>
             
                 <label>Apellido</label>
-                <input id="lastName" type="text">
+                <input id="LastName" type="text" class="form-control" name="form-lastName" placeholder="Ingrese su apellido" require>
                 
-                <label>Trabajo</label>
-                <input id="job" type="text">
+                <label>Empresa</label>
+                <input id="company" type="text" class="form-control" name="form-company" placeholder="Ingrese su trabajo" require>
                 
-                <label>Edad</label>
-                <input id="age" type="text">
+                <label>Ciudad</label>
+                <input id="city" type="text" class="form-control" name="form-city" placeholder="Ingrese su ciudad" require>
                 
                 <label>Email</label>
-                <input id="email" type="text">
+                <input id="email" type="text" class="form-control" name="form-email" placeholder="Ingrese su email" require>
+
+                <label>Mensaje</label>
+                <input id="mensaje" type="text" class="form-control" name="form-mensaje" placeholder="Ingrese su mensaje" require>
             
                 <button id="contactoBtn">Enviar</button>
                 

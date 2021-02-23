@@ -1,46 +1,239 @@
 <?php
 
-if ($_POST['butonCTA']) {
+if($_SERVER['REQUEST-METHOD'] == 'POST') {
 
-        if (!empty($_POST)) {
+    if(isset($_POST['botonContacto'])) {
 
-        $suscribe = $_POST ["form-suscribe"]; 
-
-        echo "<br>$suscribe";
-
-        if ($suscribe == "" ) {
-            echo "Error. Completar todos los campos";
-            } 
-        }
-} 
- if ($_POST['contactoBtn']) {
-
-    if (!empty($_POST)) {
-
-        $firstName = $_POST ["form-firstName"]; 
-        $lastName = $_POST ["form-lastName"];
-        $company = $_POST ["form-company"];
-        $city = $_POST ["form-city"];
-        $email = $_POST ["form-email"];
-        $mensaje = $_POST ["form-mensaje"];
-
-        echo "<br>$firstName";
-        echo "<br>$lastName";
-        echo "<br>$company";
-        echo "<br>$city";
-        echo "<br>$email";
-        echo "<br>$mensaje";
-
+            $firstName = $_POST ["form-firstName"]; 
+            $lastName = $_POST ["form-lastName"];
+            $company = $_POST ["form-company"];
+            $city = $_POST ["form-city"];
+            $email = $_POST ["form-email"];
+            $mensaje = $_POST ["form-mensaje"];
+            $notificacion = "";
+    
+            echo "<br>$firstName";
+            echo "<br>$lastName";
+            echo "<br>$company";
+            echo "<br>$city";
+            echo "<br>$email";
+            echo "<br>$mensaje";
+    
         if ($firstName == "" || $lastName == "" ||  $company == "" || $city == "" || $email == "" || $mensaje == "") {
-            echo "Error. Completar todos los campos";
+                $notificacion = "Error. Completar todos los campos";
             } else {
             if(strlen($mensaje) < 10) {
-                echo "Por favor, ingrese una consulta mas amplia";
-                }
+                    echo "Por favor, ingrese una consulta mas amplia";
+                    }
             }
         }
     }
 
+        if (isset($_POST['btn-suscripcion'])){
 
+
+    }
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollos Web y Mobile a medida</title>
+
+    <!-- Estilos Personalizados -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/menu.css">
+
+     <!-- Favicon -->
+     <link rel="icon" type="image/png" href="images/gf.jpg">
+
+    <!-- Fonts -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">    
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5PLQTHL');</script>
+    <!-- End Google Tag Manager -->
+
+</head>
+<body>
+    <header>
+        <!-- Main Top Menu -->
+            <nav>
+              <div id="navbar">
+                <div id="logo">
+                    <div class="logo">
+                        <a href="index.html"><img src="images/gf100px.jpg" alt=""> </a>
+                        <!-- <h2 class="menuTitle"><a href="index.html">GF</a></h2>-->
+                    </div>
+                 </div>
+
+                 <div id="links">
+                    <a href="about.html">About</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="contenidos.html">Content</a>
+                    <a href="desarrollo.html">Development</a>
+
+                  </div>
+
+                  <div id="cta">
+                    <a href="contacto.html" id="boton">Hablamos</a>
+                  </div>
+          
+                  <div class="mobile-btn">
+                    <a id="menu-btn" onclick="myFunction()" class="fa fa-bars fa-2x"></a>
+                  </div>
+          
+              </div>
+            </nav>
+        
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu">
+                <ul class="mobile-links">
+                  <li class="nav-list"><a href="about.html">About</a></li>
+                  <li class="nav-list"><a href="portfolio.html">Portfolio</a></li>
+                  <li class="nav-list"><a href="contenidos.html">Contenidos</a></li>
+                  <li class="nav-list"><a href="desarrollo.html">Desarrollo</a></li>
+                  <li class="nav-list"><a href="contacto.html">Contact Us</a></li>
+                </ul>
+            </div>
+    </header>
+
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PLQTHL"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- START  WhatsApp Icon -->
+
+    <a href="https://api.whatsapp.com/send?phone=541167062068&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20servicios%20." class="float" target="_blank">
+        <i class="fa fa-whatsapp my-float" aria-hidden="true"></i>
+    </a>   
+                     
+    <!-- END  WhatsApp Icon -->
+
+    <main>
+
+    <section id="mission">
+        <div class="grid">
+        <div class="textos-contact">
+            <h2 class="weight-600">Escribinos y contanos tu proyecto</h2>
+            <p>Formmamos squads para proyectos desafiantes y originales. </p>
+        </div>
+            <form class="simple-form" action="contacto.php" method="POST">
+
+                <label>Nombre</label>
+                <input id="firstName" type="text" class="form-control" name="form-firstName" placeholder="Ingrese su nombre" require>
+            
+                <label>Apellido</label>
+                <input id="LastName" type="text" class="form-control" name="form-lastName" placeholder="Ingrese su apellido" require>
+                
+                <label>Empresa</label>
+                <input id="company" type="text" class="form-control" name="form-company" placeholder="Ingrese su trabajo" require>
+                
+                <label>Ciudad</label>
+                <input id="city" type="text" class="form-control" name="form-city" placeholder="Ingrese su ciudad" require>
+                
+                <label>Email</label>
+                <input id="email" type="text" class="form-control" name="form-email" placeholder="Ingrese su email" require>
+
+                <label>Mensaje</label>
+                <input id="mensaje" type="text" class="form-control" name="form-mensaje" placeholder="Ingrese su mensaje" require>
+            
+                <button id="contactoBtn" name="botonContacto">Enviar</button>
+                
+            </form>
+<!--
+            <div class="fondoVerde">
+                <i class="far fa-lightbulb"></i>
+                <p><?php //echo $notificacion ?></p> 
+            </div>
+ -->
+         
+            
+        </div>   
+        </div>
+    </section>
+
+
+        <section id="cardSobreMi">
+            <div class="grid">
+
+                <div class="items">
+
+                    <div class="item">
+                        <i class="far fa-lightbulb"></i>
+                        <h3 class="titulo-services">01 Leading                       . 
+                        </h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing</p>
+                    </div>
+
+                    <div class="item">
+                        <i class="far fa-money-bill-alt"></i>
+                        <h3 class="titulo-services">02 Coding 
+                        </h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing</p>
+                    </div>
+
+                    <div class="item">
+                        <i class="far fa-chart-bar"></i>
+                        <h3 class="titulo-services">03 Business
+                        </h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing</p>
+                    </div>
+                   
+                </div>
+                 
+            </div>
+
+        </section>
+
+   <section id="aboutUs">
+        <div class="grid">
+            <div class="textos-about-us">
+                <h2 class="subtitulo">About us</h2>
+                <p class="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe placeat iusto, numquam consectetur enim commodi laborum unde repellendus eaque, beatae laudantium veritatis sed excepturi ipsa aspernatur quia quo animi inventore.</p>
+            </div>
+         
+        </div>
+
+        </section>
+
+    </main>
+
+<footer>
+    <div class="grid">
+        <div class="textos-footer">
+            <h2 class="subtitulo">Contactame</h2>
+        </div>
+<!-- <div class="footer-items">  -->
+    <div class="footer-item1">
+        <a href ="https://github.com/Guillef33"><i class="fab fa-github"></i></a>
+    </div>
+    <div class="footer-item2">
+        <a href="https://twitter.com/guillef33"><i class="fab fa-twitter"></i></a>
+    </div>
+    <div class="footer-item3">
+        <a href="https://www.linkedin.com/in/guillef33/"><i class="fab fa-linkedin"></i></a>
+    </div>
+<!-- </div> -->
+        <div class="textos-footer">
+            <p class="parrafo">Este sitio fue creado con CSS Grid. 2021 Buenos Aires, Argentina.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/mobileBtn.js"></script>
+
+       
+</body>
+</html>

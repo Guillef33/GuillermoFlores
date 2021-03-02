@@ -10,7 +10,7 @@ if($_SERVER['REQUEST-METHOD'] == 'POST') {
             $city = $_POST ["form-city"];
             $email = $_POST ["form-email"];
             $mensaje = $_POST ["form-mensaje"];
-            $notificacion = "";
+            $notificaciones = "";
     
             echo "<br>$firstName";
             echo "<br>$lastName";
@@ -18,12 +18,14 @@ if($_SERVER['REQUEST-METHOD'] == 'POST') {
             echo "<br>$city";
             echo "<br>$email";
             echo "<br>$mensaje";
-    
+
         if ($firstName == "" || $lastName == "" ||  $company == "" || $city == "" || $email == "" || $mensaje == "") {
                 $notificacion = "Error. Completar todos los campos";
             } else {
             if(strlen($mensaje) < 10) {
-                    echo "Por favor, ingrese una consulta mas amplia";
+                $notificaciones = "Por favor, ingrese una consulta mas amplia";
+                    } else {
+                        $notificaciones = "Mensaje enviado";
                     }
             }
         }
@@ -132,23 +134,33 @@ if($_SERVER['REQUEST-METHOD'] == 'POST') {
             <form class="simple-form" action="contacto.php" method="POST">
 
                 <label>Nombre</label>
-                <input id="firstName" type="text" class="form-control" name="form-firstName" placeholder="Ingrese su nombre" require>
+                <input id="firstName" type="text" class="form-control" value="<?php echo (isset($firstName)) ? $firstName : "" ?>" name="form-firstName" placeholder="Ingrese su nombre" require>
             
                 <label>Apellido</label>
-                <input id="LastName" type="text" class="form-control" name="form-lastName" placeholder="Ingrese su apellido" require>
+                <input id="LastName" type="text" class="form-control" value="<?php echo (isset($lastName)) ? $lastName : "" ?>" name="form-lastName" placeholder="Ingrese su apellido" require>
                 
                 <label>Empresa</label>
-                <input id="company" type="text" class="form-control" name="form-company" placeholder="Ingrese su trabajo" require>
+                <input id="company" type="text" class="form-control" value="<?php echo (isset($company)) ? $company : "" ?>" name="form-company" placeholder="Ingrese su trabajo" require>
                 
                 <label>Ciudad</label>
-                <input id="city" type="text" class="form-control" name="form-city" placeholder="Ingrese su ciudad" require>
+                <input id="city" type="text" class="form-control" value="<?php echo (isset($city)) ? $city : "" ?>" name="form-city" placeholder="Ingrese su ciudad" require>
                 
                 <label>Email</label>
-                <input id="email" type="text" class="form-control" name="form-email" placeholder="Ingrese su email" require>
+                <input id="email" type="text" class="form-control" value="<?php echo (isset($email)) ? $email : "" ?>" name="form-email" placeholder="Ingrese su email" require>
 
                 <label>Mensaje</label>
-                <input id="mensaje" type="text" class="form-control" name="form-mensaje" placeholder="Ingrese su mensaje" require>
+                <input id="mensaje" type="text" class="form-control" value="<?php echo (isset($mensaje)) ? $mensaje : "" ?>" name="form-mensaje" placeholder="Ingrese su mensaje" require>
             
+                <div class="notificaciones">
+                    <p class="border-bottom border-info p-2 text-info text-center"><?php 
+                            if (isset($notificaciones)) {
+                                echo $notificaciones; 
+                            }
+                    ?>
+                    </p> 
+                </div>
+
+
                 <button id="contactoBtn" name="botonContacto">Enviar</button>
                 
             </form>

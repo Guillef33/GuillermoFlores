@@ -1,3 +1,44 @@
+<?php
+
+if($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    if(isset($_POST['btn-suscripcion'])) {
+
+            $suscribe = $_POST ["form-suscribe"];
+            $notificaciones = "";
+
+        if ($suscribe == "") {
+                $notificaciones = "Hubo un error en la carga de tu email. Prueba de nueva.";
+            } else {
+            if(strlen($mensaje) < 10) {
+                $notificaciones = "Por favor, ingrese una consulta mas amplia";
+                    } else {
+                        $email_to = 'guillef33@gmail.com';
+                        $email_subject = 'Mensaje enviado desde el formulario web';
+                        $email_from = 'guillef33@gmail.com';
+                        $email_message = '<b>Detalles del formulario de contacto:.<b><br><br>' ;
+
+                        $headers = 'From: '.$email_from."\r\n".
+                            'Reply-To: '.$email_from."\r\n" .
+                            'Content-Type: text/html; charset=utf-8\r\n'.
+                            'X-Mailer: PHP/' . phpversion();
+
+                        if (mail($email_to, $email_subject, $email_message, $headers)) {
+                            $notificaciones = "Mensaje enviado";
+                        } else {
+                            $notificaciones = "Ha ocurrido un error, no se ha podido enviar el mensaje";
+
+                        }
+
+                    }
+            }
+        }
+    }
+
+        
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -1,6 +1,6 @@
 <?php
 
-if($_SERVER['REQUEST-METHOD'] == 'POST') {
+if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if(isset($_POST['botonContacto'])) {
 
@@ -11,29 +11,33 @@ if($_SERVER['REQUEST-METHOD'] == 'POST') {
             $email = $_POST ["form-email"];
             $mensaje = $_POST ["form-mensaje"];
             $notificaciones = "";
-    
-            echo "<br>$firstName";
-            echo "<br>$lastName";
-            echo "<br>$company";
-            echo "<br>$city";
-            echo "<br>$email";
-            echo "<br>$mensaje";
 
         if ($firstName == "" || $lastName == "" ||  $company == "" || $city == "" || $email == "" || $mensaje == "") {
-                $notificacion = "Error. Completar todos los campos";
+                $notificaciones = "Error. Completar todos los campos";
             } else {
             if(strlen($mensaje) < 10) {
                 $notificaciones = "Por favor, ingrese una consulta mas amplia";
                     } else {
-                        $notificaciones = "Mensaje enviado";
+                        $email_to = 'guillef33@gmail.com';
+                        $email_subject = 'Mensaje enviado desde el formulario web';
+                        $email_from = 'guillef33@gmail.com';
+                        $email_message = '<b>Detalles del formulario de contacto:.<b><br><br>' ;
+
+                        $headers = 'From: '.$email_from."\r\n".
+                            'Reply-To: '.$email_from."\r\n" .
+                            'Content-Type: text/html; charset=utf-8\r\n'.
+                            'X-Mailer: PHP/' . phpversion();
+
+                        if (mail($email_to, $email_subject, $email_message, $headers)) {
+                            $notificaciones = "Mensaje enviado";
+                        } else {
+                            $notificaciones = "Ha ocurrido un error, no se ha podido enviar el mensaje";
+
+                        }
+
                     }
             }
         }
-    }
-
-        if (isset($_POST['btn-suscripcion'])){
-
-
     }
 
 ?>

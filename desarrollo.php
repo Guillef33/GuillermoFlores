@@ -1,3 +1,49 @@
+<?php
+
+if($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    if(isset($_POST['botonContacto'])) {
+
+            $firstName = $_POST ["form-firstName"]; 
+            $lastName = $_POST ["form-lastName"];
+            $company = $_POST ["form-company"];
+            $city = $_POST ["form-city"];
+            $email = $_POST ["form-email"];
+            $mensaje = $_POST ["form-mensaje"];
+            $notificaciones = "";
+
+        if ($firstName == "" || $lastName == "" ||  $company == "" || $city == "" || $email == "" || $mensaje == "") {
+                $notificaciones = "Error. Completar todos los campos";
+            } else {
+            if(strlen($mensaje) < 10) {
+                $notificaciones = "Por favor, ingrese una consulta mas amplia";
+                    } else {
+                        $email_to = 'guillef33@gmail.com';
+                        $email_subject = 'Mensaje enviado desde el formulario web';
+                        $email_from = 'guillef33@gmail.com';
+                        $email_message = '<b>Detalles del formulario de contacto:.<b><br><br>' ;
+
+                        $headers = 'From: '.$email_from."\r\n".
+                            'Reply-To: '.$email_from."\r\n" .
+                            'Content-Type: text/html; charset=utf-8\r\n'.
+                            'X-Mailer: PHP/' . phpversion();
+
+                        if (mail($email_to, $email_subject, $email_message, $headers)) {
+                            $notificaciones = "Mensaje enviado";
+                        } else {
+                            $notificaciones = "Ha ocurrido un error, no se ha podido enviar el mensaje";
+
+                        }
+
+                    }
+            }
+        }
+    }
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -162,23 +208,38 @@
                 <p>Formmamos squads para proyectos desafiantes y originales. </p>
             </div>
             <div class="form">
-                <form class="simple-form">
-                    <label>Nombre</label>
-                    <input id="firstName" type="text">
-                
-                    <label>Apellido</label>
-                    <input id="lastName" type="text">
-                    
-                    <label>Trabajo</label>
-                    <input id="job" type="text">
-                    
-                    <label>Edad</label>
-                    <input id="age" type="text">
-                    
-                    <label>Email</label>
-                    <input id="email" type="text">
-                
-                    <button id="contactoBtn">Enviar</button>
+            <form class="simple-form" action="desarrollo.php" method="POST">
+
+                <label>Nombre</label>
+                <input id="firstName" type="text" class="form-control" value="<?php echo (isset($firstName)) ? $firstName : "" ?>" name="form-firstName" placeholder="Ingrese su nombre" require>
+
+                <label>Apellido</label>
+                <input id="LastName" type="text" class="form-control" value="<?php echo (isset($lastName)) ? $lastName : "" ?>" name="form-lastName" placeholder="Ingrese su apellido" require>
+
+                <label>Empresa</label>
+                <input id="company" type="text" class="form-control" value="<?php echo (isset($company)) ? $company : "" ?>" name="form-company" placeholder="Ingrese su trabajo" require>
+
+                <label>Ciudad</label>
+                <input id="city" type="text" class="form-control" value="<?php echo (isset($city)) ? $city : "" ?>" name="form-city" placeholder="Ingrese su ciudad" require>
+
+                <label>Email</label>
+                <input id="email" type="text" class="form-control" value="<?php echo (isset($email)) ? $email : "" ?>" name="form-email" placeholder="Ingrese su email" require>
+
+                <label>Mensaje</label>
+                <input id="mensaje" type="text" class="form-control" value="<?php echo (isset($mensaje)) ? $mensaje : "" ?>" name="form-mensaje" placeholder="Ingrese su mensaje" require>
+
+                <div class="notificaciones">
+                    <p class="border-bottom border-info p-2 text-info text-center"><?php 
+                            if (isset($notificaciones)) {
+                                echo $notificaciones; 
+                            }
+                    ?>
+                    </p> 
+                </div>`
+
+
+                <button id="btn-contacto-dev" name="btn-contacto-dev">Enviar</button>
+
                 </form>
             </div>                
         </div>   

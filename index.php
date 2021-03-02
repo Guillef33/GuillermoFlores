@@ -87,7 +87,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <div id="logo">
                     <div class="logo">
                     <!--    <h2 class="menuTitle"><a href="index.html">GF</a></h2>  -->
-                    <a href="index.html"><img src="images/gf100px.jpg" alt=""> </a>
+                    <a href="index.php"><img src="images/gf100px.jpg" alt=""> </a>
                     </div>
                  </div>
 
@@ -95,11 +95,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <a href="about.html">About</a>
                     <a href="portfolio.html">Portfolio</a>
                     <a href="contenidos.html">Content</a>
-                    <a href="desarrollo.html">Development</a>
+                    <a href="desarrollo.php">Development</a>
                   </div>
 
                   <div id="cta">
-                    <a href="contacto.html" id="boton">Hablamos</a>
+                    <a href="contacto.php" id="boton">Hablamos</a>
                   </div>
           
                   <div class="mobile-btn">
@@ -279,7 +279,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <p class="parrafo">Dejame tus datos y suscribite al news.</p>
                 </div>  
                 <div class="cta-row2">
-                    <form class="simple-form" action="contacto.php" method="POST">
+                    <form class="simple-form" action="index.php" method="POST">
                     <input type="email" id="inputSuscribe" class="form-control" name="form-suscribe" placeholder="Ingrese su email para suscribirse">
                     <button id="butonCTA" name="btn-suscripcion">Suscribirme</button>
                     </form>

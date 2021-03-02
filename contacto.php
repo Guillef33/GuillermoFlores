@@ -78,7 +78,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
               <div id="navbar">
                 <div id="logo">
                     <div class="logo">
-                        <a href="index.html"><img src="images/gf100px.jpg" alt=""> </a>
+                        <a href="index.php"><img src="images/gf100px.jpg" alt=""> </a>
                         <!-- <h2 class="menuTitle"><a href="index.html">GF</a></h2>-->
                     </div>
                  </div>
@@ -87,12 +87,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <a href="about.html">About</a>
                     <a href="portfolio.html">Portfolio</a>
                     <a href="contenidos.html">Content</a>
-                    <a href="desarrollo.html">Development</a>
+                    <a href="desarrollo.php">Development</a>
 
                   </div>
 
                   <div id="cta">
-                    <a href="contacto.html" id="boton">Hablamos</a>
+                    <a href="contacto.php" id="boton">Hablamos</a>
                   </div>
           
                   <div class="mobile-btn">

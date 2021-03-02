@@ -9,14 +9,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if ($suscribe == "") {
                 $notificaciones = "Hubo un error en la carga de tu email. Prueba de nueva.";
-            } else {
-            if(strlen($mensaje) < 10) {
-                $notificaciones = "Por favor, ingrese una consulta mas amplia";
+            } else { 
+            if(!filter_var($suscribe, FILTER_VALIDATE_EMAIL)) {                
+                $notificaciones = "El email ingresado no es valido";
                     } else {
                         $email_to = 'guillef33@gmail.com';
                         $email_subject = 'Mensaje enviado desde index.php';
                         $email_from = 'guillef33@gmail.com';
-                        $email_message = '<b>Detalles del formulario de contacto:.<b><br><br>' ;
+                        $email_message = '<b>Nuevo cliente que se quiere inscribir: </b>' . $suscribe;
 
                         $headers = 'From: '.$email_from."\r\n".
                             'Reply-To: '.$email_from."\r\n" .

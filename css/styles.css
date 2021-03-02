@@ -568,13 +568,13 @@ padding:10px 10px;
 /* Pantallas 800px */
 
 @media screen and (max-width:768px) {
-    .header {
+    #heroSection {
         height: auto;
     }
-    .grid {
+    #heroSection .grid {
         grid-gap:30px;
     }
-    .img-hero, .textos-hero {
+    #heroSection .img-hero, .textos-hero {
         grid-column: 1/-1;
     }
 

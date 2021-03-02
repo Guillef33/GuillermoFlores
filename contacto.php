@@ -19,7 +19,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $notificaciones = "Por favor, ingrese una consulta mas amplia";
                     } else {
                         $email_to = 'guillef33@gmail.com';
-                        $email_subject = 'Mensaje enviado desde el formulario web';
+                        $email_subject = 'Mensaje enviado desde contacto.php';
                         $email_from = 'guillef33@gmail.com';
                         $email_message = '<b>Detalles del formulario de contacto:.<b><br><br>' ;
 
